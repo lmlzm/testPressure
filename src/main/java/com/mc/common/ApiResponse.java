@@ -2,55 +2,31 @@ package com.mc.common;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.mc.entity.Replies;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.util.List;
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ApiResponse implements Serializable {
+
     private int code;
+
     private String message;
+
     private ApiResponseData data;
 
-    // Getters and setters
-
-
-    public int getCode() {
-        return code;
-    }
-
-    public void setCode(int code) {
-        this.code = code;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    public ApiResponseData getData() {
-        return data;
-    }
-
-    public void setData(ApiResponseData data) {
-        this.data = data;
-    }
-
+    @Data
+    @AllArgsConstructor
+    @NoArgsConstructor
     public static class ApiResponseData implements Serializable {
+
         private List<Replies> replies;
 
-        // Getters and setters
-
-
-        public List<Replies> getReplies() {
-            return replies;
-        }
-
-        public void setReplies(List<Replies> replies) {
-            this.replies = replies;
-        }
     }
 }

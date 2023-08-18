@@ -1,10 +1,8 @@
 /**
-  * Copyright 2023 bejson.com 
-  */
+ * Copyright 2023 bejson.com
+ */
 package com.mc.entity;
 
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,7 +22,6 @@ import java.util.List;
 @NoArgsConstructor
 public class Replies implements Serializable {
 
-    private int count;
     private int rcount;
     private long ctime;
     private int like;
